@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Realizar pedido</title>
+  
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+
+      
+    <div class="container">
+        <nav class="nav-main">
+            <img src="img/pastel.jpg" width="100" height="100" alt="Logotipo" class="nav-brand">
+        </nav>
+    </div>
+
+<H1><strong>Aqui puedes realizar tu pedido</strong></H1>
+
+<br>
+
+<hr>
+
+<form action="pedido.js"></form>
+<label for="Nombre">Escribe tu nombre por favor: </label> <br>
+<input type="text" name="Nombre" placeholder="Nombre"> <br>
+
+<br><h2><Strong>Elige los Cakes que quieras añadir a tu pedido</Strong></h2>
+<br>
+<input type="checkbox" id="GreenLemon" name="GreenLemon" value="GreenLemon" class="valores">
+<label for="GreenLemon">Green Lemon Cake</label><br>
+<input type="checkbox" id="SweetSt" name="SweetSt" value="SweetSt" class="valores">
+<label for="SweetSt">Sweet Strawberry</label><br>
+<input type="checkbox" id="Coconut" name="Coconut" value="Coconut" class="valores">
+<label for="Coconut">Coconut Cake</label><br>
+<input type="checkbox" id="Cheesecake" name="Cheesecake" value="Cheesecake" class="valores">
+<label for="Cheesecake">Cheesecake</label><br>
+<input type="checkbox" id="Banana" name="Banana" value="Banana" class="valores">
+<label for="Banana">Banana and Vanilla</label><br>
+<hr>
+<br>
+<h2><Strong>Elige los Cupcakes que quieras añadir a tu pedido</Strong></h2>
+<br>
+<input type="checkbox" id="Princess" name="Princess" value="Princess" class="valores" class="valores">
+<label for="Princess">Pink Princess Cake</label><br>
+<input type="checkbox" id="SweetVa" name="SweetVa" value="SweetVa" class="valores" class="valores">
+<label for="SweetVa">Sweet Vanilla</label><br>
+<input type="checkbox" id="Pudding" name="Pudding" value="Pudding" class="valores" class="valores">
+<label for="Pudding">Banana Pudding</label><br>
+<input type="checkbox" id="Marshmallow" name="Marshmallow" value="Marshmallow" class="valores">
+<label for="Marshmallow">Marshmallow Taste</label><br>
+<input type="checkbox" id="Peppermint" name="Peppermint" value="Peppermint" class="valores">
+<label for="Peppermint">Peppermint Cupcake</label><br>
+<hr>
+<br>
+<h2><Strong>Elige los Desserts que quieras añadir a tu pedido</Strong></h2>
+<br>
+<input type="checkbox" id="SweetCh" name="SweetCh" value="SweetCh" class="valores">
+<label for="SweetCh">Sweet Cherry Dessert</label><br>
+<input type="checkbox" id="Lovely" name="Lovely" value="Lovely" class="valores">
+<label for="Lovely">Lovely Pink Dessert</label><br>
+<input type="checkbox" id="Apple" name="Apple" value="Apple" class="valores">
+<label for="Apple">Apple Dumpling</label><br>
+<input type="checkbox" id="BananaT" name="BananaT" value="BananaT" class="valores">
+<label for="BananaT">Banana Taste</label><br>
+<input type="checkbox" id="ChocolateBr" name="ChocolateBr" value="ChocolateBr" class="valores">
+<label for="ChocolateBr">Chocolate Brownie</label><br>
+<hr>
+<br>
+<input type="button" id="boton" value="Avanzar">
+
+
+<h2>Su Total es de: </h2>
+<ul id="seleccion" class="list-group"></ul>
+
+<script>
+
+    var boton = document.getElementById('boton');
+
+    var seleccion = document.getElementById('seleccion');
+
+    var checks = document.querySelectorAll('.valores');
+    boton.addEventListener('click',function(){
+        checks.forEach((e)=>{
+            if(e.checked == true){
+                var elemento = document.createElement('li');
+                elemento.className = 'list-group-item';
+                elemento.innerHTML = e.value;
+                lista.appendChild(elemento);
+                
+
+            }
+            
+        });
+    });
+
+</script>
+</body>
+</html>
